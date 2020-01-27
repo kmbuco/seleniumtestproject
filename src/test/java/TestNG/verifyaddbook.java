@@ -14,8 +14,9 @@ public class verifyaddbook {
 
 	@BeforeMethod
 	public void launch() {
+		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("");
+		driver.get("http://localhost:8080/addressbook");
 		driver.manage().window().maximize();
 	}
 
@@ -24,7 +25,7 @@ public class verifyaddbook {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//div[@class='v-button v-widget']")).click();
 		//driver.findElement(By.className("v-button")).click();
-		driver.findElement(By.id("gwt-uid-5")).sendKeys("Edureka");
+		driver.findElement(By.id("gwt-uid-5")).sendKeys("Testing");
 		driver.findElement(By.id("gwt-uid-7")).sendKeys("Devops");
 		driver.findElement(By.id("gwt-uid-9")).sendKeys("9834562789");
 		driver.findElement(By.id("gwt-uid-11")).sendKeys("Devops@edureka.co");
@@ -34,5 +35,6 @@ public class verifyaddbook {
 
 	@AfterMethod
 	public void close() {
+		driver.close();
 	}
 }

@@ -2,7 +2,7 @@
 <suite name="WebDriver">
 	<test name="Tests">
 		<classes>
-			<class name="TestNG.NewTest3"/>
+			<class name="TestNG.verifyaddbook"/>
 		</classes>
 	</test>
 </suite>
