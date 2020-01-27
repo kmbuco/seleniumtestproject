@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-WebDriver">
-              <span class="suite-name border-passed">WebDriver</span>
+              <span class="suite-name border-skipped">WebDriver</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-WebDriver" class="hide-methods passed suite-WebDriver"> (hide)</a> <!-- hide-methods passed suite-WebDriver -->
-                      <a href="#" panel-name="suite-WebDriver" class="show-methods passed suite-WebDriver"> (show)</a> <!-- show-methods passed suite-WebDriver -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-WebDriver" class="hide-methods skipped suite-WebDriver"> (hide)</a> <!-- hide-methods skipped suite-WebDriver -->
+                      <a href="#" panel-name="suite-WebDriver" class="show-methods skipped suite-WebDriver"> (show)</a> <!-- show-methods skipped suite-WebDriver -->
                     </span>
-                    <div class="method-list-content passed suite-WebDriver">
+                    <div class="method-list-content skipped suite-WebDriver">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-WebDriver" title="TestNG.verifyaddbook" hash-for-method="verify">verify</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-WebDriver -->
+                    </div> <!-- method-list-content skipped suite-WebDriver -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-WebDriver" class="panel WebDriver">
-          <div class="suite-WebDriver-class-passed">
+          <div class="suite-WebDriver-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">TestNG.verifyaddbook</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,10 +128,35 @@
                   <a name="verify">
                   </a> <!-- verify -->
                   <span class="method-name">verify</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;ICT01C6B1&apos;, ip: &apos;172.23.56.225&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:192)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:178)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at TestNG.verifyaddbook.launch(verifyaddbook.java:18)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:15997/status] to be available after 20002 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:187)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:148)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-WebDriver-class-passed -->
+          </div> <!-- suite-WebDriver-class-skipped -->
         </div> <!-- panel WebDriver -->
         <div panel-name="test-xml-WebDriver" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -188,12 +213,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verify')
 data.setCell(0, 2, 'TestNG.verifyaddbook')
-data.setCell(0, 3, 868);
+data.setCell(0, 3, 0);
 window.suiteTableData['WebDriver']= { tableData: data, tableDiv: 'times-div-WebDriver'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 868 ms</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-WebDriver">
               </div> <!-- times-div-WebDriver -->
             </div> <!-- times-div -->
@@ -221,17 +246,15 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">TestNG.verifyaddbook</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">launch</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verify</span>
-                <span class="method-start">4996 ms</span>
+                <span class="method-start">-1580144308079 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">close</span>
-                <span class="method-start">5865 ms</span>
-              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

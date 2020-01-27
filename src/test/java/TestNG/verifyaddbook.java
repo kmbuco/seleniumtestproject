@@ -14,7 +14,7 @@ public class verifyaddbook {
 
 	@BeforeMethod
 	public void launch() {
-		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","chromedriver");
 		driver = new ChromeDriver();
 		driver.get("http://localhost:8080/addressbook");
 		driver.manage().window().maximize();
